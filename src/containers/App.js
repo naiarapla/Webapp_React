@@ -209,8 +209,13 @@ class App extends React.Component {
           
         this.setState({ pedido: pedido });
           //this.setState({quantity:this.state.quantity-1});
-          
-        
+          //this.setState({preciototal: this.state.preciototal-this.state.productos[id].precio});
+          if(this.state.quantity>1){
+            this.setState({preciototal: this.state.preciototal-this.state.productos[id].precio});
+           }
+          if(this.state.quantity==1){
+           this.setState({preciototal:0});
+          }
          }else{
           
           let pedido = [...this.state.pedido]; // cambiar a pedidos
@@ -221,15 +226,17 @@ class App extends React.Component {
             }
           }
               //this.setState({quantity: this.state.quantity-1});
-    
+              this.setState({preciototal: this.state.preciototal-this.state.productos[id].precio});
          }
         
          this.setState({quantity: this.state.quantity-1});
          if(this.state.quantity==0){
          this.setState({quantity: this.state.quantity});
+         this.setState({preciototal: this.state.preciototal});
+         
         }
   
-        this.setState({preciototal: this.state.preciototal-this.state.productos[id].precio});
+        //this.setState({preciototal: this.state.preciototal-this.state.productos[id].precio});
         
         }
 
