@@ -1,0 +1,15 @@
+.Register {
+    background-image: url('https://www.quiksilver.es/on/demandware.static/-/Sites-QS-FR-Library/es_ES/v1618112265365/quiksilver/backoffix/ups/1ups/1u_fullscreen_centered/img/backgrounds/europe/outdoor-desktop.jpg');
+    background-size: cover;
+    height: 550px;
+  }
+
+  
+  .Register label {
+    display: inline-block;
+    width: 80px;
+  }
+
+  .Register button {
+    margin-top: 10px;
+    }
